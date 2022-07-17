@@ -27,7 +27,7 @@ python -u main.py
 To run 20-Split CIFAR100:
 
 ```
-python -u main.py --svd_thres 150 --svd_thres_core 180 --dataset CIFAR100  --first_split_size 5 --other_split_size 5  --batch_size 16 --baseline 0 --kl_coef 1.0  --head_epoch 15  --u_k 0.9
+python -u main.py --dataroot ../data/ --reg_coef 100 --model_lr 1e-4 --head_lr 1e-3 --svd_lr 5e-5 --bn_lr 5e-4 --gamma 0.5  --svd_thres 150 --svd_thres_core 180 --model_weight_decay 5e-5  --dataset CIFAR100  --first_split_size 5 --other_split_size 5  --batch_size 16 --baseline 0 --kl_coef 1.0  --head_epoch 15  --u_k 0.9
 ```
 
 To run 25-Split TinyImageNet:
